@@ -33,6 +33,6 @@ if __name__ == '__main__':
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
   app = config.make_wsgi_app()
-  server = make_server('0.0.0.0', 6543, app)
+  server = make_server('0.0.0.0', 6000, app)
   print("Running server! Should be up.")
   server.serve_forever()
