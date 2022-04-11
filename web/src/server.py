@@ -14,11 +14,16 @@ def get_home(req):
   # Connect to the database and retrieve the users
   db = mysql.connect(host=db_host, database=db_name, user=db_user, passwd=db_pass)
   cursor = db.cursor()
-  cursor.execute("select first_name, last_name, email from Users;")
+  cursor.execute("select first_name, last_name, email from Team_member;")
   records = cursor.fetchall()
   db.close()
 
-  return render_to_response('templates/home.html', {'users': records}, request=req)
+  #Add email link 
+  for i in range(len(records)):
+    records[i] = list(records[i])
+    records[i].append("mailto:%s?subject=Hello"%(records[i][-1]))
+
+  return render_to_response('templates/home.html', {'Team_member': records}, request=req)
 
 ''' Route Configurations '''
 if __name__ == '__main__':

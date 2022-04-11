@@ -16,36 +16,34 @@ db = mysql.connect(user=db_user, password=db_pass, host=db_host, database=db_nam
 cursor = db.cursor()
 
 # # CAUTION!!! CAUTION!!! CAUTION!!! CAUTION!!! CAUTION!!! CAUTION!!! CAUTION!!!
-cursor.execute("drop table if exists Users;")
+cursor.execute("drop table if exists Team_member;")
 
 # Create a TStudents table (wrapping it in a try-except is good practice)
 try:
   cursor.execute("""
-    CREATE TABLE Users (
+    CREATE TABLE Team_member (
       id          integer  AUTO_INCREMENT PRIMARY KEY,
       first_name  VARCHAR(30) NOT NULL,
       last_name   VARCHAR(30) NOT NULL,
-      email       VARCHAR(50) NOT NULL,
-      password    VARCHAR(20) NOT NULL,
-      created_at  TIMESTAMP
+      email       VARCHAR(50) NOT NULL
     );
   """)
 except:
   print("Users table already exists. Not recreating it.")
 
 # Insert Records
-query = "insert into Users (first_name, last_name, email, password, created_at) values (%s, %s, %s, %s, %s)"
+query = "insert into Team_member (first_name, last_name, email) values (%s, %s, %s)"
 values = [
-  ('rick','gessner','rick@gessner.com', 'abc123', '2020-02-20 12:00:00'),
-  ('ramsin','khoshabeh','ramsin@khoshabeh.com', 'abc123', '2020-02-20 12:00:00'),
-  ('al','pisano','al@pisano.com', 'abc123', '2020-02-20 12:00:00'),
-  ('truong','nguyen','truong@nguyen.com', 'abc123', '2020-02-20 12:00:00')
+  ('Gaopo','Huang','ghuang@ucsd.edu'),
+  ('Junzhe','Luo','j5luo@ucsd.edu'),
+  ('Shixuan','Wu','shw003@ucsd.edu'),
+  ('Xunhao','Yang','x5yang@ucsd.edu')
 ]
 cursor.executemany(query, values)
 db.commit()
 
 # Selecting Records
-cursor.execute("select * from Users;")
+cursor.execute("select * from Team_member;")
 print('---------- DATABASE INITIALIZED ----------')
 [print(x) for x in cursor]
 db.close()
