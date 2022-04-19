@@ -37,6 +37,7 @@ body {
 p, ol li, ul li {
   font-size: calc(0.8rem + 1vw);
 }
+
 /* -- ELEMENTS -- */
 .title {
   background: var(--dark-color-alt);
@@ -100,13 +101,21 @@ table th, table td {
 table tr:nth-child(odd) {
   background-color: var(--light-color);
 }
+ul ol {
+  padding: var(--padding-sm);
+  list-style-position: inside;
+}
 
 ul {
-  list-style-type: square;
-  padding: var(--padding-sm);
+  list-style-type: square
 }
+
 ul li:nth-child(odd) {
   background-color: var(--light-color);
+}
+
+sup {
+  font-size: .5em
 }
 
 .link {
@@ -119,6 +128,16 @@ ul li:nth-child(odd) {
   font-size: calc(0.5rem + 0.5vw);
   padding: var(--padding-sm)
 }
+
+.heartlist li {
+	padding: 0 0 0 3rem;
+	list-style: none;
+	background-image: url(../icons/heart.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 2rem;
+}
+
 /* horizontal line with text label */
 .separator {
   font-size: calc(1rem + 1vw);
@@ -140,6 +159,18 @@ ul li:nth-child(odd) {
 .separator::after {
   margin-left: 1rem;
 }
+
+.main-tab {
+  margin: none;
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: calc( var( --padding-xxl) + 3vw);
+  padding-right: calc( var( --padding-xxl) + 3vw);
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: column;
+}
+
 /* -- GRID -- */
 .responsive_grid {
   display: grid;
@@ -147,7 +178,11 @@ ul li:nth-child(odd) {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
+
 /* -- UTILITY */
+.center {
+  text-align: center;
+}
 .padding-lg {
   padding: var(--padding-lg);
 }
@@ -217,6 +252,12 @@ ul li:nth-child(odd) {
 }
 .btn.pill {
   border-radius: var(--rounded-radius);
+}
+.btn.tab {
+  font-size: calc(0.5rem + 0.5vw);
+  padding: none;
+  display: inline;
+  text-align: center;
 }
 .btn[disabled] {
   color: rgba(0, 0, 0, 0.3);
