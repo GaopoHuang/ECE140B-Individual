@@ -42,7 +42,7 @@ p, ol li, ul li {
 .title {
   background: var(--dark-color-alt);
   color: white;
-  padding: calc(1rem + 1vh) calc(1rem + 3vw) calc(3rem + 1vh) calc(1rem + 3vw);
+  padding: calc(1rem + 8vh) calc(1rem + 3vw) calc(3rem + 1vh) calc(1rem + 3vw);
 }
 .title h1 {
   font-size: calc(1rem + 5vw);
@@ -169,6 +169,10 @@ sup {
   display: grid;
   grid-gap: 1rem;
   grid-auto-flow: column;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background: var(--accent-color-dark);
 }
 
 /* -- GRID -- */

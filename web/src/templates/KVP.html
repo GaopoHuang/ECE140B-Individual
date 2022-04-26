@@ -16,11 +16,11 @@
 
   <body>
     <section class="main-tab">
-      <button class='btn tab' value="" id="tab1" > Home Page </button>
-      <button  class='btn tab' value="KVP" id="tab2"> KVP </button>
+      <button class='btn tab' value="" id="tab1" > Home </button>
+      <button  class='btn tab' value="KVP" id="tab2"> Product </button>
 
     </section>
-    <div class='title'>
+    <div class='title' id="title">
       <h1> Pill Care<sup>TM</sup> </h1>
       <p> Caring in Your Family!</p>
     </div>
@@ -30,14 +30,57 @@
 
       
       <div class='separator'>Key Value Proposition</div>
-        <p>Our Pill Care<sup>TM</sup> helps family members who have elders to take correct pills on time regularly by reminding elders to take correct type and amount of pill using customized family members' voice recordings and giving the family a chance to bond the youngs and elders unlike <a class="link" href="https://herohealth.com/">HERO</a>,<a class="link" href="https://www.envisionamerica.com/scriptalk-station-for-patients">ScripTalk</a>, and <a class="link" href="https://www.cvs.com/mobile-cvs/apps">CVS Mobile app</a>. </p>
+        <p>Our Pill Care<sup>TM</sup> helps family members who have elders to take correct pills on time regularly by reminding elders to take correct type and amount of pill using customized family members' voice recordings and giving the family a chance to bond the youngs and elders unlike <a class="link" href="https://herohealth.com/">HERO</a>, <a class="link" href="https://www.envisionamerica.com/scriptalk-station-for-patients">ScripTalk</a>, and <a class="link" href="https://www.cvs.com/mobile-cvs/apps">CVS Mobile app</a>. </p>
 
       <div class="separator">Key Value Illustration</div>
       <section class='responsive_grid'>
-        <div class="center"><h4>Setup Phase</h4><img src="images/KVP_setup.jpg" id="KVP_setup"></div>
-        <div class="center"><h4>Use Phase</h4><img src="images/KVP_use.jpg" id="KVP_use"></div>
+        <div class="center">
+          <h4> Setup phase </h4>
+          <div id="setup0content" >
+            <ol>
+            <li>Our user John replaces each pill bottle cap with our Pill Care cap. </li>
+            <li>John puts the bottle on the Pill Care </li>
+            <li>Pill Care, "Bipped, start recording voice" </li>
+            <li>John: “Grandma, please take this pill 3 pieces now, It's john, love ya!”</li>
+            <li>John then sets up the time on the screen of PillCare</li>
+            </ol>
+          </div>
+          <div id="setup1content" style="display:none;">
+            <img src="images/KVP_setup.jpg" id="KVP_setup">
+          </div>
+          <button class='btn pill' id="setup0"  ONCLICK="ShowTextOrImage('setup')"> Show visual </button>
+          <button class='btn pill' id="setup1" style="display:none;" ONCLICK="ShowTextOrImage('setup')"> Show text </button>
+        </div>
+        
+         <div class="center">
+          <h4> Use phase </h4>
+          <div id="use0content">
+            <ol>
+            <li>It's 7:00 pm! Pill Care says:"Pill Time!" </li>
+            <li>Grandma holds up one of the pill bottle and puts it on Pill Care </li>
+            <li>If the bottle does not contain the correct pills, Pill Care, "Not this one! Try another one please!"</li>
+            <li> Grandma tries another pill bottle. </li>
+            <li>If the bottle is correct, John's voice from Pill Care, "Grandma, please take this pill 3 pieces now, It's john, love ya!"</li>
+            <li>Grandma then happily takes the pill for 3 pieces with the love of his grandson in heart.</li>
+            </ol>
+          </div>
+          <div id="use1content" style="display:none;">
+            <img src="images/KVP_use.jpg" id="KVP_use">
+          </div>
+          <button class='btn pill' id="use0" ONCLICK="ShowTextOrImage('use')"> Show visual </button>
+          <button class='btn pill' id="use1" style="display:none;"  ONCLICK="ShowTextOrImage('use')"> Show text </button>
+        </div>
       </section>
+
+
+      <div class="separator">Empathy Map</div>
+      <section class='responsive_grid'>
+        <div class="center"><img style="display:block;" width="100%" height="100%" src="images/EmpathyMap_customer.png" id="EmpathyMap_customer"></div>
+        <div class="center"><img style="display:block;" width="100%" height="100%" src="images/EmpathyMap_user.png" id="EmpathyMap_user"></div>
+      </section>
+
       <hr> 
+
 
       <div class = 'footnote'> * Content from this page is still tentative and subject to change until the product is finalized </div>
       
