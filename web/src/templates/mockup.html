@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Info -->
+    <title>ECE140B Project</title>
+    <meta name="author" content="Gaopo Huang">
+    <meta name="description" content="KVP">
+
+    <link rel="stylesheet" type="text/css" href="../public/css/ece140b.css">
+  </head>
+
+  <body>
+    <section class="main-tab">
+      <button class='btn tab pill' value="" id="tab0" > Home </button>
+      <button  class='btn tab pill' value="profile" id="tab1"> User Profile </button>
+      <button  class='btn tab pill' value="schedule" id="tab2"> Medication Schedule </button>
+      <button  class='btn tab pill' value="history" id="tab3"> Medication history </button>
+
+    </section>
+    <div class='title' id="title">
+      <h1> Pill Care<sup>TM</sup> </h1>
+      <p> Caring in Your Family!</p>
+    </div>
+
+    <section class='padding-responsive'>
+
+
+      
+      <div class='separator'>User Profile</div>
+        <ul class="nonelist">
+            <Name>Dear Grandma</Name>
+            <li>Age: 60</li>
+            <li>Relationship: Grandma</li>
+            <li>Notes: None</li>
+        </ul>
+
+        <div class='separator'>Medication Schedule</div>
+
+        <table class='margin-top-xl'>
+          <thead>
+            <tr>
+              <th class='small'> Pill Name </th>
+              <th class='medium'> Amount </th>
+              <th class='large'> Time </th>
+              <th> Days </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> Pill X </td>
+              <td> 2 </td>
+              <td> 08:00, 22:00 </td>
+              <td> M,T,W,Th,F</td>
+            </tr>
+            <tr>
+                <td> Pill Y </td>
+                <td> 1 </td>
+                <td> 08:00</td>
+                <td> M,T,W,Th,F,Sa,Su</td>
+            </tr>
+            <tr>
+                <td> Pill Z </td>
+                <td> 3 </td>
+                <td> 08:00 </td>
+                <td> M,W</td>
+              </tr>
+          </tbody>
+        </table>
+
+
+        <div class='separator'>Medication History</div>
+
+        <table class='margin-top-xl'>
+          <thead>
+            <tr>
+              <th class='small'> Pill Name </th>
+              <th class='medium'> Amount </th>
+              <th class='large'> Date & Time </th>
+              <th> Status </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> Pill X </td>
+              <td> 2 </td>
+              <td> 2022-05-01 22:03:02, Friday </td>
+              <td> On time </td>
+            </tr>
+            <tr>
+                <td> Pill Y </td>
+                <td> 1 </td>
+                <td> 2022-05-01 08:03:46, Friday</td>
+                <td> On time </td>
+            </tr>
+            <tr>
+                <td> Pill Z </td>
+                <td> 3 </td>
+                <td> 2022-05-01 08:02:11, Friday </td>
+                <td class="label"> Wrong time</td>
+              </tr>
+              <tr>
+                <td> Pill X </td>
+                <td> 2 </td>
+                <td> 2022-05-01 08:01:57, Friday </td>
+                <td> On time </td>
+              </tr>
+          </tbody>
+        </table>
+
+      <hr> 
+      
+
+    </section>
+
+    <script type='text/javascript' src='javascripts/button.js'></script>
+  </body>
+</html>
