@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Info -->
+    <title>ECE140B Project</title>
+    <meta name="author" content="Gaopo Huang">
+    <meta name="description" content="Home Page">
+
+    <link rel="stylesheet" type="text/css" href="css/ece140b.css">
+  </head>
+
+  <body>
+    <section id="maintab"></section>
+
+    <div class="separator">Product IA</div>
+    <section >
+        <ul class="nonelist">
+        <li class="underline"><h6>What basic information does a typical user need to have access to on first interaction with your product?</h6> </li>
+        <li>   Our product is a physical device with the following features: 
+            <ul class='heartlist'>
+                <li> <span class='bold'>Switch</span> -- turn on and turn off the device </li>
+                <li> <span class='bold'>Display</span> -- show a message and direction delivered to the user</li>
+                <li> <span class='bold'>Speaker</span> -- play the audio/recording </li>
+                <li> <span class='bold'>Button</span> -- near the microphone, it will record the sound when pressed</li>
+                <li> <span class='bold'>Volume wheel</span> -- control the volume of the speaker </li>
+                <li> <span class='bold'>RFID icon indicator</span> -- where to scan and verify each bottle  </li>
+                <li> <span class='bold'>Pill bottle caps</span> -- with RFID stickers to be placed on each pill bottle  </li>
+            </ul> 
+        </li>
+        <hr>
+        <li class="underline"><h6>What IA Design Principles (Dan Brown) are important for your product?</h6></li>
+        <li>
+        <ul class="heartlist">
+            <li><span class='bold'>Principle of Exemplars</span>: Each time the user needs to set up a medication schedule, the procedure is consistent and predictable by following the instructions. Also, the RFID icon indicator is consistent for the users to place their bottles, similar to most devices with RFID technology.</li>
+            <li><span class='bold'>Principle of Disclosure</span>: The home page of the display is a menu. All components serve the focused task, which is setting up the medication alarm for the users with their personal voices. Some other customizable features such as font size and alarm volume can be set but not directly visible to distract the user.</li>
+            <li><span class='bold'>Principle of Front Doors</span>: Our display will show the current status (Setting up pill / daily use) at any given time and steps to the operating users where they are. Also, the display will throw an error message if they did something invalid, such as enter the time interval outside 24 hours.</li>
+        </ul>
+        <hr>
+        </li>
+        <li class="underline"><h6>Which structural Organizational Principle(s) make(s) the most sense for your product?</h6></li>
+        <li>
+        <ul class="heartlist">
+            <li><span class='bold'>Sequential</span>: The process of setting up the pill schedule is a sequential procedure where the users will be guided through each step to input the name, amount and time of the pills to take.</li>
+            <li><span class='bold'>Hierarchical</span>: The menu on the home page indicates which tasks one wants to do, such as adding pill or editing pill information. Users can choose the task, then proceed into further steps..</li>
+        </ul>  
+        </li>
+    </section>
+    
+    <div class="separator">Principles of Visual Hierarchy</div>
+
+    <section class='responsive_grid'>
+        <section class="center">
+          <h5> Color and Contrast</h5>
+          <img class='img' style="display:block;" width="100%" height="5%" src="images/IA_color.jpg">
+          <img class='img' style="display:block;" width="100%" height="5%" src="images/IA_color2.jpg">
+          <div>The use of color and contrast when scrolling will make the main tab bar change background color and thus be distinguiable from the other elements</div>
+        </section>
+        <section class="center">
+          <h5> Typographical Hieracrchy</h5>
+          <img class='img' style="display:block;" width="100%" height="75%" src="images/IA_typography.jpg">
+          <div>The use of typography on this section clearly emphasizes the question, then with special patterns for each of the bullet points in the answer</div>
+        </section>
+        <section class="center">
+          <h5> Reptition</h5>      
+            <img class='img' style="display:block;" width="100%" height="70%" src="images/IA_repetition.jpg">
+          </div>
+          <div>The use of repetition among different section allows users to better interpret each section of the content as its own and understand where they are </div>
+        </section>
+      </section>
+
+    <script type='text/javascript' src='javascripts/essential.js'></script>
+    <script type='text/javascript' src='javascripts/button.js'></script>
+  </body>
+</html>

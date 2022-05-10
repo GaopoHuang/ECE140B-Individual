@@ -141,10 +141,10 @@ sup {
 .nonelist li {
 	padding: 0 0 0 3rem;
 	list-style: none;
-	background-image: url(../icons/heart.png);
+	/* background-image: url(../icons/heart.png);
 	background-repeat: no-repeat;
 	background-position: left center;
-	background-size: 2rem;
+	background-size: 2rem; */
 }
 
 /* horizontal line with text label */
@@ -193,6 +193,12 @@ sup {
 }
 
 /* -- UTILITY */
+.underline {
+  text-decoration: underline;
+}
+.bold {
+  font-weight: bold;
+}
 .center {
   text-align: center;
 }

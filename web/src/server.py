@@ -29,6 +29,12 @@ def get_home(req):
 def get_KVP(req):
   return FileResponse('templates/KVP.html')
 
+def get_UIMockup(req):
+  return FileResponse('templates/UIMockup.html')
+
+def get_IA(req):
+  return FileResponse('templates/IA.html')
+
 ''' Route Configurations '''
 if __name__ == '__main__':
   config = Configurator()
@@ -41,6 +47,12 @@ if __name__ == '__main__':
 
   config.add_route('get_KVP', '/KVP')
   config.add_view(get_KVP, route_name='get_KVP')
+
+  config.add_route('get_UIMockup', '/UIMockup')
+  config.add_view(get_UIMockup, route_name='get_UIMockup')
+
+  config.add_route('get_IA', '/IA')
+  config.add_view(get_IA, route_name='get_IA')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
