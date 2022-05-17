@@ -33,6 +33,7 @@ function goToPage(tabId) {
   tabMap.set('tab2', '/KVP');
   tabMap.set('tab3', '/UIMockup');
   tabMap.set('tab4', '/IA');
+  tabMap.set('tab5', '/ID');
   console.log("Clicked!!!");
   console.log("Going to ", tabMap.get(tabId))
   location.assign(tabMap.get(tabId))

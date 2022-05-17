@@ -35,6 +35,9 @@ def get_UIMockup(req):
 def get_IA(req):
   return FileResponse('templates/IA.html')
 
+def get_ID(req):
+  return FileResponse('templates/ID.html')
+
 ''' Route Configurations '''
 if __name__ == '__main__':
   config = Configurator()
@@ -53,6 +56,9 @@ if __name__ == '__main__':
 
   config.add_route('get_IA', '/IA')
   config.add_view(get_IA, route_name='get_IA')
+
+  config.add_route('get_ID', '/ID')
+  config.add_view(get_ID, route_name='get_ID')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
