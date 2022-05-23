@@ -38,6 +38,9 @@ def get_IA(req):
 def get_ID(req):
   return FileResponse('templates/ID.html')
 
+def get_CostRev(req):
+  return FileResponse('templates/CostRev.html')
+
 ''' Route Configurations '''
 if __name__ == '__main__':
   config = Configurator()
@@ -59,6 +62,9 @@ if __name__ == '__main__':
 
   config.add_route('get_ID', '/ID')
   config.add_view(get_ID, route_name='get_ID')
+
+  config.add_route('get_CostRev', '/CostRev')
+  config.add_view(get_CostRev, route_name='get_CostRev')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
