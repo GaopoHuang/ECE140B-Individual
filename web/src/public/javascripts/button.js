@@ -35,6 +35,7 @@ function goToPage(tabId) {
   tabMap.set('tab4', '/IA');
   tabMap.set('tab5', '/ID');
   tabMap.set('tab6', '/CostRev');
+  tabMap.set('tab7', '/pivot');
   console.log("Clicked!!!");
   console.log("Going to ", tabMap.get(tabId))
   location.assign(tabMap.get(tabId))

@@ -41,6 +41,9 @@ def get_ID(req):
 def get_CostRev(req):
   return FileResponse('templates/CostRev.html')
 
+def get_pivot(req):
+  return FileResponse('templates/pivot.html')
+
 ''' Route Configurations '''
 if __name__ == '__main__':
   config = Configurator()
@@ -65,6 +68,9 @@ if __name__ == '__main__':
 
   config.add_route('get_CostRev', '/CostRev')
   config.add_view(get_CostRev, route_name='get_CostRev')
+
+  config.add_route('get_pivot', '/pivot')
+  config.add_view(get_pivot, route_name='get_pivot')
 
   config.add_static_view(name='/', path='./public', cache_max_age=3600)
 
